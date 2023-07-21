@@ -1,2 +1,1 @@
-# BMI
-created bmi indicator using html,css,nodejs
+# BMI-Calculator with JavaScript
