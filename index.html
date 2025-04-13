@@ -4,26 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator with JavaScript</title>
+    <title>Advanced BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 align ="center"><u> BMI CALCULATOR</h1></u>
-    <h2 align = "right"> - DEVELOPED BY ANIRUDH SHARMA</h2>
-    <h2 align = "center"> <u>CHECK YOUR BMI BY ENTERING HEIGHT AND WEIGHT </h2></u>
-    <div class="wrapper">
-        <p>Height in CM:
-            <input type="text" id="height"><br><span id="height_error"></span>
-        </p>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-calculator"></i> BMI CALCULATOR</h1>
+            <h2>CHECK YOUR BODY MASS INDEX</h2>
+        </header>
 
-        <p>Weight in KG:
-            <input type="text" id="weight"><br><span id="weight_error"></span>
-        </p>
-        
+        <div class="calculator-card">
+            <div class="input-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" placeholder="Enter height in cm">
+                <span id="height_error" class="error-message"></span>
+            </div>
 
-        <button id="btn">Calculate</button>
-        <p id="output"></p>
+            <div class="input-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" placeholder="Enter weight in kg">
+                <span id="weight_error" class="error-message"></span>
+            </div>
+
+            <button id="btn" class="calculate-btn">
+                <i class="fas fa-calculator"></i> Calculate BMI
+            </button>
+
+            <div id="output" class="result-container">
+                <div id="bmi-value">00.0</div>
+                <div id="bmi-category">Enter your details</div>
+                <div id="bmi-range"></div>
+            </div>
+
+            <div class="bmi-scale">
+                <div class="scale-labels">
+                    <span>Underweight</span>
+                    <span>Healthy</span>
+                    <span>Overweight</span>
+                    <span>Obese</span>
+                </div>
+                <div class="scale-bar">
+                    <div class="scale-segment underweight"></div>
+                    <div class="scale-segment healthy"></div>
+                    <div class="scale-segment overweight"></div>
+                    <div class="scale-segment obese"></div>
+                    <div id="bmi-indicator" class="bmi-indicator">▲</div>
+                </div>
+                <div class="scale-numbers">
+                    <span>&lt;18.5</span>
+                    <span>18.5-24.9</span>
+                    <span>25-29.9</span>
+                    <span>≥30</span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Developed by Anirudh Sharma</p>
+        </footer>
     </div>
 </body>
 </html>
