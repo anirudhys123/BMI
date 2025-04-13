@@ -151,7 +151,7 @@ header h2 {
     top: -10px;               /* Pushes triangle clearly above the bar */
     left: 0;
     transform: translateX(-50%);
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
     z-index: 10;
     transition: left 0.4s ease;
